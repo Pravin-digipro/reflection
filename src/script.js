@@ -1,3 +1,5 @@
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 // First step
@@ -74,7 +76,7 @@ tl.to(
 tl.to(
   ".hero-main-container",
   {
-    backgroundSize: "28vh",
+    backgroundSize: "70vh",
     duration: 1.5,
   },
   "<+=0.2"
@@ -152,28 +154,10 @@ tl.to(
 );
 
 tl.set(".hero-1-container", { opacity: 0 });
-tl.set(".hero-2-container", { visibility: "visible" });
 
-tl.to(".hero-2-container", { opacity: 1, duration: 3 }, "<+=0.2");
 
-tl.fromTo(
-  ".hero-2-container",
-  {
-    backgroundImage: `radial-gradient(
-          circle at 50% 200vh,
-          rgba(255, 214, 135, 0) 0,
-          rgba(157, 47, 106, 0.5) 90vh,
-          rgba(157, 47, 106, 0.8) 120vh,
-          rgba(32, 31, 66, 0) 150vh
-        )`,
-  },
-  {
-    backgroundImage: `radial-gradient(circle at 50% 3.9575vh, rgb(255, 213, 133) 0vh,
-     rgb(247, 77, 82) 50.011vh,
-      rgb(145, 42, 105) 90.0183vh,
-       rgba(32, 31, 66, 0) 140.599vh)`,
-    duration: 3,
-  },
-  "<1.2" // starts 1.2 seconds before the previous animation
-  // he times from the start of the previous animation and since we're using 1.5s for the prev duration it's like 70% of the previous animation
-);
+/* ===============================
+   CALENDAR LOGIC (ADD-ONLY)
+   DOES NOT TOUCH OLD CODE
+================================ */
+

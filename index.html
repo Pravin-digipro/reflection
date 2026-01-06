@@ -1,73 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GTA VI Website</title>
-    <link rel="stylesheet" href="./src/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="overlay"></div>
-      <div class="hero-1-container">
-        <div class="hero-main-container">
-          <img
-            class="hero-main-logo"
-            draggable="false"
-            src="/gta_logo_cut.webp"
-            alt="gta logo"
-          />
-          <img
-            class="hero-main-image"
-            draggable="false"
-            src="/gta_hero.webp"
-            alt="gta logo"
-          />
-        </div>
-        <div class="hero-text-logo-container">
-          <div class="hero-text-logo"></div>
-          <div>
-            <h3 class="hero-text">
-              Coming<br />
-              May 26<br />
-              2026
-            </h3>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RE Website</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./src/style.css" />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    /* ===== Swiper Styling (isolated) ===== */
+    .swiper-section {
+      width: 100%;
+      height: 100vh;
+      background: #0b0b0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 1200px;
+      height: 600px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(255,255,255,0.5);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #fff;
+    }
+  </style>
+
+    <style>
+  .bookbody {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #book {
+      width: 90vw;
+      height: 90vh;
+    }
+
+    .page {
+      width: 550px;
+      height: 600px;
+    }
+
+    .page img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Navigation arrows */
+    .nav {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .nav button {
+      pointer-events: all;
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: #fff;
+      font-size: 32px;
+      width: 50px;
+      height: 70px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .nav button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav button.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="container">
+    <div class="overlay"></div>
+
+    <div class="hero-1-container">
+      <div class="hero-main-container">
+        <img
+          class="hero-main-logo"
+          draggable="false"
+          src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766047609/Hero_BG_1_tfpw5v.jpg"
+          alt="Hero Logo"
+        />
+
+        <img
+          class="hero-main-image"
+          draggable="false"
+          src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766047609/Hero_BG_1_tfpw5v.jpg"
+          alt="Hero Background"
+        />
       </div>
-      <div class="hero-2-container">
-        <h3>Vice City, USA.</h3>
-        <p>
-          Jason and Lucia have always known the deck is stacked against them.
-          But when an easy score goes wrong, they find themselves on the darkest
-          side of the sunniest place in America, in the middle of a criminal
-          conspiracy stretching across the state of Leonida — forced to rely on
-          each other more than ever if they want to make it out alive.
-        </p>
-      </div>
-      <!-- Scroll Indicator -->
-      <div class="scroll-indicator">
-        <svg
-          width="34"
-          height="14"
-          viewBox="0 0 34 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          class="_1smfa210"
-          focusable="false"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z"
-            fill="currentColor"
-          ></path>
-        </svg>
+
+      <div class="hero-text-logo-container">
+        <div class="hero-text-logo"></div>
       </div>
     </div>
-  </body>
+
+    
+    <!-- ================= MEDIA SECTION ================= -->
+    <section class="hero-2-section">
+      <div class="hero-2-container">
+
+        <!-- LEFT : VIDEO -->
+        <div class="hero-video">
+          <video
+            src="https://res.cloudinary.com/dbqjuze5g/video/upload/v1765879503/YTDown.com_YouTube_Royal-Enfield-Motoverse-2025-Day-1_Media_6O1doB0zIl4_002_720p_gryhzx.mp4"
+            muted
+            playsinline
+            controls
+          ></video>
+        </div>
+
+        <!-- RIGHT : IMAGE -->
+        <div class="hero-image">
+          <img
+            src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766060871/Group_3_oqou3k.png"
+            alt="Poster"
+          />
+        </div>
+      </div>
+    </section>
+  <!-- ================= PDF FLIPBOOK SECTION ================= -->
+   <div class = bookbody>
+  <div id="book">
+    <div class="page"><img src="./public/page01.jpg"></div>
+    <div class="page"><img src="./public/page02.jpg"></div>
+    <div class="page"><img src="./public/page03.jpg"></div>
+    <div class="page"><img src="./public/page04.jpg"></div>
+    <div class="page"><img src="./public/page05.jpg"></div>
+    <div class="page"><img src="./public/page06.jpg"></div>
+    <div class="page"><img src="./public/page07.jpg"></div>
+    <div class="page"><img src="./public/page08.jpg"></div>
+  </div>
+
+  <!-- Arrows -->
+  <div class="nav">
+    <button id="prevBtn">❮</button>
+    <button id="nextBtn">❯</button>
+  </div>
+</div>
+    <div class="swiper10">
+
+    </div>
+    <!-- ================= SWIPER SECTION ================= -->
+    <section class="swiper-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766236940/Marketing_1_3_ofhslx.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766236956/Marketing_2_2_a4tups.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766237047/Marketing_3_1_yzqvxa.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <div class="swiper10">
+
+    </div>
+
+        <!-- ================= SWIPER SECTION ================= -->
+    <section class="swiper-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766237736/Rides_1_1_susakp.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766237739/Rides_2_1_fn56a1.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
+    <div class="swiper10">
+
+    </div>
+
+    <!-- Scroll Indicator -->
+             <!-- ================= SWIPER SECTION ================= -->
+    <section class="swiper-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./public//Social Mission 1.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <div class="swiper10">
+
+    </div>
+                <!-- ================= SWIPER SECTION ================= -->
+    <section class="swiper-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766462395/Artboard_11_ydr3c3.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    
+    <div class="swiper10">
+
+    </div>
+  <!-- ================= FOOTER ================= -->
+    <div class="scroll-indicator">
+      <svg width="34" height="14" viewBox="0 0 34 14" fill="none">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script type="module" src="./src/script.js"></script>
+
+  <script src="./src/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<!--swiper funtion-->
+  <script>
+    new Swiper(".mySwiper", {
+      loop: false,
+      speed: 900,
+      grabCursor: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+  <!-- PageFlip JS -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+
+  <script>
+    const bookEl = document.getElementById("book");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    const pageFlip = new St.PageFlip(bookEl, {
+      width: 550,
+      height: 600,
+      size: "fixed",
+      showCover: false,
+      maxShadowOpacity: 0.6,
+      mobileScrollSupport: false
+    });
+
+    pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+
+    // Arrow actions
+    prevBtn.addEventListener("click", () => pageFlip.flipPrev());
+    nextBtn.addEventListener("click", () => pageFlip.flipNext());
+
+    // Hide arrows on first / last page
+    function updateArrows() {
+      const current = pageFlip.getCurrentPageIndex();
+      const total = pageFlip.getPageCount();
+
+      // First page → hide prev
+      if (current === 0) {
+        prevBtn.classList.add("hidden");
+      } else {
+        prevBtn.classList.remove("hidden");
+      }
+
+      // Last page → hide next
+      if (current === total - 1) {
+        nextBtn.classList.add("hidden");
+      } else {
+        nextBtn.classList.remove("hidden");
+      }
+    }
+
+    // Initial state
+    updateArrows();
+
+    // Update arrows after every page flip
+    pageFlip.on("flip", updateArrows);
+  </script>
+
+
+</body>
 </html>
