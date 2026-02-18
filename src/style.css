@@ -387,28 +387,138 @@ body {
 
 
 
-@media (max-width: 600px) {
-.hero-2-container{
+/* ================= TABLET (max-width: 768px) ================= */
+@media (max-width: 768px) {
 
-  width: 390px;
-  display: flex;
-  flex-direction: column;
+  /* Hero */
+  .hero-main-container {
+    background-size: 600vh;
+  }
+
+  .hero-text-logo {
+    background-size: 45vh;
+  }
+
+  /* Media section */
+  .hero-2-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 30px 0;
+  }
+
+  .hero-2-container {
+    width: 95%;
+    max-width: 600px;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-video {
+    width: 100%;
+  }
+
+  .hero-video video {
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  /* Poster text */
+  .poster-text h1 {
+    font-size: 40px;
+  }
+
+  .poster-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Spacer */
+  .swiper10 {
+    height: 30px;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    bottom: 15px;
+  }
+
+  /* Flipbook cover */
+  .cover {
+    width: 95vw;
+    height: auto;
+  }
+
+  .book {
+    perspective: 800px;
+  }
 }
 
-.hero-video{
-  width: 100%;
-}
+/* ================= PHONE (max-width: 480px) ================= */
+@media (max-width: 480px) {
 
-.hero-video video{
-  width: 100%;
-}
+  /* Hero */
+  .hero-main-container {
+    background-size: 400vh;
+  }
 
-.hero-image{
-  width: 100%;
-}
+  .hero-text-logo {
+    background-size: 35vh;
+  }
 
-.hero-image img{
-  width: 340px;
-}
+  /* Media section */
+  .hero-2-container {
+    width: 100%;
+    padding: 0 10px;
+  }
 
+  .hero-video video {
+    max-height: 240px;
+    border-radius: 8px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  /* Text */
+  .poster-text h1 {
+    font-size: 28px;
+  }
+
+  .poster-text p {
+    font-size: 14px;
+  }
+
+  /* Spacer */
+  .swiper10 {
+    height: 20px;
+  }
+
+  /* Flipbook cover */
+  .cover {
+    width: 100vw;
+    height: auto;
+  }
+
+  /* Book pages (CSS-based flipbook) */
+  .bookpg .book-title {
+    font-size: calc(var(--base-size) * 2);
+    margin-top: calc(var(--baseline) * 3);
+  }
+
+  .bookpg .blockquote-text {
+    font-size: calc(var(--base-size) * 0.55);
+  }
 }
