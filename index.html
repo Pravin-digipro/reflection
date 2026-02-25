@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RE Website</title>
 
+  <!-- Preloader CSS -->
+  <link rel="stylesheet" href="./src/preloader.css" />
+
   <!-- Main CSS -->
   <link rel="stylesheet" href="./src/style.css" />
 
@@ -33,7 +36,7 @@
     }
 
     .swiper {
-      width: 90%;
+      width: 1200px;
       max-width: 1200px;
       height: 600px;
       border-radius: 20px;
@@ -88,7 +91,7 @@
     @media (max-width: 480px) {
       .swiper {
         width: 98%;
-        height: 220px;
+        height: 150px;
         border-radius: 8px;
       }
     }
@@ -97,7 +100,7 @@
   <style>
     .bookbody {
       margin: 0;
-      background: #111;
+      background: #111117;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -109,8 +112,9 @@
     }
 
     #book {
-      width: 90vw;
-      max-width: 1200px;
+      width: 98vw;
+      height: 90vh;
+      max-width: 1600px;
       margin: 0 auto;
     }
 
@@ -170,7 +174,8 @@
       }
 
       #book {
-        width: 96vw;
+        width: 98vw;
+        max-width: 100%;
       }
 
       .nav {
@@ -207,164 +212,185 @@
 
 <body>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="container">
-    <div class="overlay"></div>
-
-    <div class="hero-1-container">
-      <div class="hero-main-container">
-        <img class="hero-main-logo" draggable="false"
-          src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766047609/Hero_BG_1_tfpw5v.jpg" alt="Hero Logo" />
-
-        <img class="hero-main-image" draggable="false"
-          src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766047609/Hero_BG_1_tfpw5v.jpg"
-          alt="Hero Background" />
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766132837/Asset_11_xmcqoz.svg" alt="RE Logo" />
       </div>
-
-      <div class="hero-text-logo-container">
-        <div class="hero-text-logo"></div>
+      <div class="preloader__bar-wrap">
+        <div class="preloader__bar"></div>
       </div>
+      <p class="preloader__text">Loading Experience…</p>
     </div>
+  </div>
 
+  <!-- ================= SCROLL WRAPPER ================= -->
+  <div id="scroll-wrapper">
 
-    <!-- ================= MEDIA SECTION ================= -->
-    <section class="hero-2-section">
-      <div class="hero-2-container">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="container page-section" data-section="hero">
+      <div class="overlay"></div>
 
-        <!-- LEFT : VIDEO -->
-        <div class="hero-video">
-          <video
-            src="https://res.cloudinary.com/dbqjuze5g/video/upload/v1765879503/YTDown.com_YouTube_Royal-Enfield-Motoverse-2025-Day-1_Media_6O1doB0zIl4_002_720p_gryhzx.mp4"
-            muted playsinline controls></video>
+      <div class="hero-1-container">
+        <div class="hero-main-container">
+          <img class="hero-main-logo" draggable="false"
+            src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766047609/Hero_BG_1_tfpw5v.jpg" alt="Hero Logo" />
+
+          <img class="hero-main-image" draggable="false"
+            src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766047609/Hero_BG_1_tfpw5v.jpg"
+            alt="Hero Background" />
         </div>
 
-        <!-- RIGHT : IMAGE -->
-        <div class="hero-image">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766060871/Group_3_oqou3k.png" alt="Poster" />
+        <div class="hero-text-logo-container">
+          <div class="hero-text-logo"></div>
         </div>
+      </div>
+
+
+      <!-- ================= MEDIA SECTION ================= -->
+      <section class="hero-2-section">
+        <div class="hero-2-container">
+
+          <!-- LEFT : VIDEO -->
+          <div class="hero-video">
+            <video src="https://res.cloudinary.com/dbqjuze5g/video/upload/v1771995688/Message_from_CCO_desk_diyitx.mp4"
+              poster="https://res.cloudinary.com/dbqjuze5g/image/upload/v1771996054/From_CCOs_desk_Thumbnail0_aaincr.jpg"
+              muted playsinline controls>
+            </video>
+          </div>
+
+          <!-- RIGHT : IMAGE -->
+          <div class="hero-image">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766060871/Group_3_oqou3k.png" alt="Poster" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- ================= SWIPER SECTION 1 (Dealer Stories) ================= -->
+    <section class="swiper-section page-section" data-section="dealer-stories">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012230/Dealer_Stories_1_wihaby.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012228/Dealer_Stories_2_evuz2f.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012227/Dealer_Stories_3_erupmg.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012235/Dealer_Stories_4_k2pboc.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012923/Dealer_Stories_5_1_ftkles.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
-  </section>
 
-  <!-- ================= PDF FLIPBOOK SECTION ================= -->
-  <div class="bookbody">
-    <div id="book">
-      <div class="page"><img src="./page01.jpg"></div>
-      <div class="page"><img src="./page02.jpg"></div>
-      <div class="page"><img src="./page03.jpg"></div>
-      <div class="page"><img src="./page04.jpg"></div>
-      <div class="page"><img src="./page05.jpg"></div>
-      <div class="page"><img src="./page06.jpg"></div>
-      <div class="page"><img src="./page07.jpg"></div>
-      <div class="page"><img src="./page08.jpg"></div>
-    </div>
+    <!-- gap -->
+    <div class="section-gap" aria-hidden="true"></div>
 
-    <!-- Arrows -->
-    <div class="nav">
-      <button id="prevBtn">❮</button>
-      <button id="nextBtn">❯</button>
-    </div>
-  </div>
-  <div class="swiper10">
-
-  </div>
-  <!-- ================= SWIPER SECTION ================= -->
-  <section class="swiper-section">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766236940/Marketing_1_3_ofhslx.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766236956/Marketing_2_2_a4tups.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766237047/Marketing_3_1_yzqvxa.jpg" />
-        </div>
+    <!-- ================= PDF FLIPBOOK SECTION ================= -->
+    <div class="bookbody page-section" data-section="flipbook">
+      <div id="book">
+        <div class="page"><img src="./page01.jpg"></div>
+        <div class="page"><img src="./page02.jpg"></div>
+        <div class="page"><img src="./page03.jpg"></div>
+        <div class="page"><img src="./page04.jpg"></div>
+        <div class="page"><img src="./page05.jpg"></div>
+        <div class="page"><img src="./page06.jpg"></div>
+        <div class="page"><img src="./page07.jpg"></div>
+        <div class="page"><img src="./page08.jpg"></div>
       </div>
 
-      <!-- Controls -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <div class="swiper10">
-
-  </div>
-
-  <!-- ================= SWIPER SECTION ================= -->
-  <section class="swiper-section">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766237736/Rides_1_1_susakp.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766237739/Rides_2_1_fn56a1.jpg" />
-        </div>
+      <!-- Arrows -->
+      <div class="nav">
+        <button id="prevBtn">❮</button>
+        <button id="nextBtn">❯</button>
       </div>
-
-      <!-- Controls -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
-  </section>
 
+    <!-- gap -->
+    <div class="section-gap" aria-hidden="true"></div>
 
-  <div class="swiper10">
-
-  </div>
-
-  <!-- Scroll Indicator -->
-  <!-- ================= SWIPER SECTION ================= -->
-  <section class="swiper-section">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./Social%20Mission%201.jpg" />
+    <!-- ================= SWIPER SECTION 2 (Rides) ================= -->
+    <section class="swiper-section page-section" data-section="rides">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042462/Marketing_1_4_qa42qz.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042464/Marketing_2_3_jjmbup.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042463/Marketing_3_1_uxfhmr.jpg" />
+          </div>
         </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
+    </section>
 
-      <!-- Controls -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+    <!-- gap -->
+    <div class="section-gap" aria-hidden="true"></div>
 
-  <div class="swiper10">
-
-  </div>
-  <!-- ================= SWIPER SECTION ================= -->
-  <section class="swiper-section">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1766462395/Artboard_11_ydr3c3.jpg" />
+    <!-- ================= SWIPER SECTION 3 (Social Mission) ================= -->
+    <section class="swiper-section page-section" data-section="social-mission">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042776/America_and_EMEA_kwiftu.jpg" />
+          </div>
         </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
+    </section>
 
-      <!-- Controls -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+    <!-- gap -->
+    <div class="section-gap" aria-hidden="true"></div>
+
+    <!-- ================= SWIPER SECTION 4 (Artboard) ================= -->
+    <section class="swiper-section page-section" data-section="artboard">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042852/Social_Mission_2_dfppqg.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER / SCROLL INDICATOR ================= -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg width="34" height="14" viewBox="0 0 34 14" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z"
+          fill="currentColor" />
+      </svg>
     </div>
-  </section>
 
-  <div class="swiper10">
-
-  </div>
-  <!-- ================= FOOTER ================= -->
-  <div class="scroll-indicator">
-    <svg width="34" height="14" viewBox="0 0 34 14" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z"
-        fill="currentColor" />
-    </svg>
-  </div>
+  </div><!-- /#scroll-wrapper -->
 
   <!-- ================= SCRIPTS ================= -->
   <!-- GSAP -->
@@ -501,6 +527,9 @@
     });
   </script>
 
+  <script>
+    gtag('event', 'test_event');
+  </script>
 
 </body>
 
