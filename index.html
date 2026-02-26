@@ -29,7 +29,6 @@
     .swiper-section {
       width: 100%;
       height: 100vh;
-      background: #0b0b0b;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -166,6 +165,13 @@
       pointer-events: none;
     }
 
+    .swiper_block{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+
     /* ===== Tablet Flipbook ===== */
     @media (max-width: 768px) {
       .bookbody {
@@ -211,6 +217,11 @@
 </head>
 
 <body>
+  <script>
+  if (localStorage.getItem("dealerAccess") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
 
   <!-- ================= PRELOADER ================= -->
   <div id="preloader" aria-hidden="true">
@@ -272,19 +283,19 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012230/Dealer_Stories_1_wihaby.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772083907/Dealer_Stories_1_1_nei8ws.jpg" />
           </div>
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012228/Dealer_Stories_2_evuz2f.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772084023/Dealer_Stories_2_1_rswzui.jpg" />
           </div>
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012227/Dealer_Stories_3_erupmg.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772084131/Dealer_Stories_3_1_gevyk0.jpg" />
           </div>
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012235/Dealer_Stories_4_k2pboc.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772084225/Dealer_Stories_4_1_gyq4dx.jpg" />
           </div>
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772012923/Dealer_Stories_5_1_ftkles.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772084458/Dealer_Stories_5_2_hwor12.jpg" />
           </div>
         </div>
 
@@ -295,8 +306,7 @@
       </div>
     </section>
 
-    <!-- gap -->
-    <div class="section-gap" aria-hidden="true"></div>
+
 
     <!-- ================= PDF FLIPBOOK SECTION ================= -->
     <div class="bookbody page-section" data-section="flipbook">
@@ -318,15 +328,14 @@
       </div>
     </div>
 
-    <!-- gap -->
-    <div class="section-gap" aria-hidden="true"></div>
+    <div class="swiper_block">
 
-    <!-- ================= SWIPER SECTION 2 (Rides) ================= -->
+    <!-- ================= SWIPER SECTION 2 (Marketting) ================= -->
     <section class="swiper-section page-section" data-section="rides">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042462/Marketing_1_4_qa42qz.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772083286/Marketing_1_4_1_zi6qbi.jpg" />
           </div>
           <div class="swiper-slide">
             <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042464/Marketing_2_3_jjmbup.jpg" />
@@ -343,8 +352,25 @@
       </div>
     </section>
 
-    <!-- gap -->
-    <div class="section-gap" aria-hidden="true"></div>
+
+
+    <!-- ================= SWIPER SECTION 4 (social mission) ================= -->
+    <section class="swiper-section page-section" data-section="artboard">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042852/Social_Mission_2_dfppqg.jpg" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
 
     <!-- ================= SWIPER SECTION 3 (Social Mission) ================= -->
     <section class="swiper-section page-section" data-section="social-mission">
@@ -362,15 +388,15 @@
       </div>
     </section>
 
-    <!-- gap -->
-    <div class="section-gap" aria-hidden="true"></div>
-
-    <!-- ================= SWIPER SECTION 4 (Artboard) ================= -->
-    <section class="swiper-section page-section" data-section="artboard">
+        <!-- ================= SWIPER SECTION 3 (Social Mission) ================= -->
+    <section class="swiper-section page-section" data-section="social-mission">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772042852/Social_Mission_2_dfppqg.jpg" />
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772101130/APAC_SAARC_1_ociwzi.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://res.cloudinary.com/dbqjuze5g/image/upload/v1772101266/America_and_EMEA_1_ghvk5d.jpg" />
           </div>
         </div>
 
@@ -380,6 +406,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
+    </div>
 
     <!-- ================= FOOTER / SCROLL INDICATOR ================= -->
     <div class="scroll-indicator" aria-hidden="true">
